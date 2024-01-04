@@ -3,9 +3,9 @@ import time
 start = int(input("Enter the starting number: "))
 end = int(input("Enter the end number: "))
 skip = int(input("Enter the number you want to skip: "))
-stop = int(input("Enter the break number:" ))
+stop = int(input("Enter the break number:"))
 
-for i in range(start,end+1):
+for i in range(start, end+1):
     if i == skip:
         continue
     elif i == stop:
