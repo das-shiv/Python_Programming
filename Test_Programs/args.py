@@ -1,11 +1,12 @@
-# THE sys module has different methods like the argv method which is used to pass command line argument while running a program
-import sys
+# *args = It is used to pass any number of arguments to a function, it creates a tuple of the arguments passed.
+# We can name it anything other *args, * is mandatory , e.g. *items, *values, *numbers etc.
 
-#print(f"The name of the program is {sys.argv[0]}")
-#print(f"The argument list is {list(sys.argv)}")
-#prog = sys.argv[0]
-name = sys.argv[1]
-id = int(sys.argv[2])
+def addition(*args):
+    sum = 0
+    for i in args:
+        sum = sum + i
 
-print("The name of the program is: ", sys.argv[0])
-print(" Name of the author is :", name, f"Author id is {id}")
+    return sum 
+
+
+print(addition(1,2,3,4,34,5.45))
