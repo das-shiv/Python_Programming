@@ -1,0 +1,4 @@
+> inheritance: we can create a child class from a parent class, and the child class will inherit all the attributes, and fuction from the
+                parent class.
+
+                we can add new attrubutes and functions in child class, but these will not be available to the parent class.

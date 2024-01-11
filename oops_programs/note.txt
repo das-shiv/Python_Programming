@@ -1,0 +1,59 @@
+OOPS:
+
+> Object oriented programming : Let us create models of real life objects in our programs.
+
+> Class: class are like blueprint of a real life object, e.g. cars, mobiles, house, pen, computer etc.
+        a class is consists of attributes which defines the real life object, the attributes can be described using
+        datatypes inside a class.
+         a class also consists of methods or functions which describes the behaviour of the real life object.
+       
+        a class encapsulate both data (attributes or properties) and behavior (methods or functions) related to a 
+        particular concept or real world entity.
+       
+
+> object: an object is an instance of a class, it means we can create mulitple objects of the same real life entity
+          that is defined by a class, e.g we can creat a Car class and we can create different type of car objects
+          from that class, every car object will have the attributes and methods from the Car class.
+          we can create mulitple objects from the same class.
+
+
+> def __init__(self): This method inside the class is used to initialize an object. It's also called constructor in
+                      other programming language like java.
+
+                      it is automatically called when an object is created.
+
+
+
+----------------------------------------------------------------------------------------------------------------
+
+> class variable : it is defined outside the constructor method and can be accessed by various ways outside of class.
+                e.g. 
+                class Mobile:
+                    mobile_type = "touch screen"  # Class variable 
+
+                # to access this outside of a class
+
+                Class.mobile_type
+                mobile1.mobile_type
+
+                we can modify this for an object of the class like
+                mobile1.mobile_type = "keypad" # it will only modify the variable for the mobile1 object
+                Mobile.mobile_type = "keypad"  # it will modify the variable for all the objects 
+
+
+                # to access it within a function inside a class that is using the (self) argument
+
+                def calling(self):
+                    print(f"This is a {Mobile.mobile_type} mobile")
+                    print("The " +self.brand+ " can make calls")
+
+
+> instance variable: These variables are declared inside the constructor function. 
+
+def __init__(self,brand,model): # when an object is created, the brand, model value needs to be passed
+        self.brand = brand  # Instance variable
+        self.model = model  # self.model = model sets the value of instance variable model to the value that got passed while creating the object.
+    
+
+
+> each instance of the class has it's own copy of the instace variables.
