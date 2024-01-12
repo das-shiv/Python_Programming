@@ -1,0 +1,25 @@
+> Mulit level inheritance: Here a class is derived from another child class, which was derived from it's parent class.
+                            the child class inherits the attributes and functions from it's parent class as well as parent class's parent class.
+
+
+
+
+e.g.
+class Oragnism:  #parent class
+    alive = True
+
+
+class Animal(Oragnism):  #Animal class is derived from Oragnism class, it is child class of Oragnism class and parent class of Dog class.
+    def eat(self):
+        print("This animal is eating")
+
+class Dog(Animal):      #Dog class is derived from Animal class.
+    def bark(self):
+        print("This dog is barking")
+
+
+dog1 = Dog()
+print("Is this dog alive? ",dog1.alive)
+dog1.eat()
+dog1.bark()
+
