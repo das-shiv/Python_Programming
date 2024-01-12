@@ -1,0 +1,22 @@
+Method overriding: when a class is derived from another class, the child class inherits all the methods from parents class.
+                    but we can create a method in child class with same name and arguments that's in parent class, and implement it in a
+                    different way. this is called method overriding.
+
+
+
+e.g.
+
+class Animal:
+    def eat(self):
+        print("This animal is eating")
+
+
+class Rabbit(Animal):
+    def eat(self):
+        print("This rabbit is eating")  #The eat method from Animal class is overriden in the Rabbit class.
+
+
+
+rab1 = Rabbit()
+rab1.eat()
+
