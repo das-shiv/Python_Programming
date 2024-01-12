@@ -1,0 +1,23 @@
+> in python the sort() method can be used to sort items in a list.
+
+> to sort items in tuples, sets and other iterables that are not a list we can use the sorted() function.
+
+
+e.g.
+
+1. using the sort() method:
+
+players = ["Messi", "Neymar", "Ronaldo", "Iniesta", "Xavi"]
+
+players.sort()
+
+print(players)
+
+
+
+2. using the sorted() funcion
+
+players = ("Messi", "Neymar", "Ronaldo", "Iniesta", "Xavi")
+
+sorted_list = sorted(players)
+print(sorted_list)
