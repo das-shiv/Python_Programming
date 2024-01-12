@@ -1,0 +1,13 @@
+'''
+> Duck Typing: in duck typing the class of an object is less important then the methods and properties.
+            the type or class of an object is determined by its behavior (methods and properties) rather than
+            its explicit inheritance or type declaration. The idea is that if an object behaves like a certain type
+            (by having the required methods or properties), it is treated as an instance of that type, 
+            regardless of its actual class or inheritance
+
+> in the above example when we passed the duck object to the catch function it executed the walk and talk function of Duck class,
+    when we passed the dog object it executed the walk and talk function from Dog class.
+
+> The term Duck Typing comes from the saying "If it walks like a duck, and quacks like a duck then it must be a duck"
+
+'''

@@ -1,0 +1,39 @@
+> Higher order function: an higher order function is a funciton that either accepts one or more function as an argument,
+                         or it returns a functions.
+
+
+e.g. 
+
+1. funciton as an argument:
+
+def speak(func):    #func will accept the name of the loud or quiet function as argument
+    text = func("Hello")  #calling the func function 
+    print(text)
+
+def loud(mssg):
+    return mssg.upper()
+
+def quiet(mssg):
+    return mssg.lower()
+
+
+speak(loud) #passing loud funciton as argument
+speak(quiet) #passing quiet function as argument
+
+
+2. Retruns function:
+
+
+def divisor(x):
+    def divident(y):
+        return y/x
+    return divident
+
+div = divisor(2)
+
+result = div(10)
+print(result)
+
+# when we called div = divisor(2), it sets the value of divisor(2) and the divisor funciton returns the dividend function which is
+ stored as div variable, now when we call the div(10) function, the divident(y=10) is set and the function is executed, and returns 10/2
+ 

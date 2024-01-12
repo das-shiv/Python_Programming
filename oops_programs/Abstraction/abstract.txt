@@ -7,7 +7,7 @@ abstract class: an abstract class is class that has at least one abstract method
                 any class derived from an abstract class must provide implementation of all the abstract methods in the abstract class.
 
 
-abstract method: an method that does not have any clear implementation is an abstract method. 
+abstract method: an method that have a declaration but does not have any clear implementation is an abstract method. 
                 it is the responsibilty of any derived class from that class to implement the abstract method.
 
 
