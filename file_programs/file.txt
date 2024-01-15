@@ -1,0 +1,105 @@
+Copy file:
+            copyfile() = copies the content of the file, 
+            copy() = copyfile() + permissions + destination can be a directory, 
+            copy2() = copy() + metadata of the file
+
+
+e.g.
+
+import shutil
+
+shutil.copy("file.txt", "copyfile.txt" ) # this code copies the content of file.txt file in current directory to copyfile.txt
+
+-------------------------------------------------------------------------------------------------------------
+Move file:
+            moves a file from source to destination. using the replace() function in os module.
+            os.path.exists() checks if a file exists or not.
+
+e.g.
+
+import os
+
+source = input("Enter the source path: ")
+destination = input("Enter the destination path: ") # the destination path must include the target file name.
+
+
+if os.path.exists(destination):   #Checks if the file exists in destination 
+        print("The file/directory already exists.")
+    else:
+        os.replace(source, destination) #moves the file from source to destination directory
+        print("File/directory moved successfully.")
+-------------------------------------------------------------------------------------------------------
+Open file and Read a file:
+            used to open a file in a given location.
+
+e.g.
+
+location = input("Enter the full path to the file :")
+
+try:
+
+    with open(location, 'r') as file:  #to open a file with r option
+        print(file.read())    #file.read() to read the content of the file
+except Exception as e:
+    print(e)
+
+#print(file.closed)   #to close the open file
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------
+Write file:
+            used to write content to a file.
+
+e.g.
+
+location = input("Enter the location of the file: ")
+text = input("Enter the text you want to add to the file: ")
+with open (location, 'a') as file:  #to open a file with a(append) option
+    file.write(text + "\n") #file.write for writing something
+
+file.closed  #close the file after writing 
+
+'''
+file modes
+r = read  (default mode)
+w = write (will replace text)
+a = append (will append the text)
+'''
+
+
+----------------------------------------------------------------------------------------------------------------
+Delete file:
+            used for deleting a file.
+
+
+e.g.
+
+import os
+import shutil
+
+file_name = 'file.txt'
+directory_name = 'folder'
+try:
+
+    os.remove(file_name) #remove a file
+except Exception as e:
+    print(e)
+
+try:
+
+    os.rmdir(directory_name) #remove an empty directory
+except Exception as e:
+    print(e)
+
+try:
+    shutil.rmtree(directory_name) # to remove non empty directory
+except Exception as e:
+    print(e)
+
+
+
+
+
